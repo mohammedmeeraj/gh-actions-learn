@@ -4,8 +4,16 @@ jobs:
     Ubuntu-echo:
         runs-on: ubuntu-latest
         steps:
-            - name: Show Os
+            - name: Show OS
               run: |
                 echo "This job is running on Ubuntu runner"
+                echo "Runner os: $RUNNER_OS"
+    windows-echo:
+        runs-on: windows-2025
+        steps:
+          - name: Show OS
+            shell: bash
+            run: |
+                echo "This job is running on windows 2025"
                 echo "Runner os: $RUNNER_OS"
               
